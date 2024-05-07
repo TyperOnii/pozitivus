@@ -1,0 +1,32 @@
+// ------ Кнопка --------------------------------
+
+.button {
+  @include flex-center(true);
+  height: var(--button-height);
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--white-color);
+  background-color: var(--dark-color);
+  border-radius: var(--border-radius);
+  border: var(--border);
+  padding-inline: 35px;
+  @include hover {
+    background-color: var(--accent-color);
+
+    color: var(--dark-color);
+  }
+  &:focus-visible {
+    color: var(--black-color);
+    background-color: var(--accent-color);
+  }
+}
+
+.button--transparent {
+  color: var(--dark-color);
+  border: 1px solid var(--dark-color);
+  background-color: transparent;
+  @include hover {
+    background-color: var(--black-color);
+    color: var(--white-color);
+  }
+}

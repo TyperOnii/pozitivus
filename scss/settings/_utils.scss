@@ -1,0 +1,29 @@
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.main {
+  flex: 1 0 auto;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  padding-inline: var(--container-padding-x);
+}
+
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+.visible-mobile {
+  @include mobile-above {
+    display: none !important;
+  }
+}

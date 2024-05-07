@@ -1,0 +1,86 @@
+.header {
+  padding-top: var(--section-padding-y);
+  @include desktop {
+    padding-top: 30px;
+  }
+  @include mobile {
+    padding-top: 15px;
+  }
+  &__button {
+    @include tablet {
+      height: 48px;
+      font-size: 16px;
+      padding-inline: 16px;
+    }
+  }
+  &__logo {
+    padding-right: 15px;
+    display: inline-block;
+    @include tablet {
+      max-width: 120px;
+    }
+    @include mobile {
+      max-width: 144px;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 40px;
+    @include tablet {
+      column-gap: 30px;
+    }
+  }
+  &__manupulation {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+  }
+  &__nav {
+    font-size: 20px;
+    margin-left: auto;
+    @include desktop {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__list {
+    align-items: center;
+    display: flex;
+    column-gap: 40px;
+    @include desktop {
+      column-gap: 20px;
+    }
+  }
+  &__list-item {
+  }
+  &__list-link {
+    position: relative;
+    display: inline-flex;
+    height: 48px;
+    align-items: center;
+    color: var(--black-color);
+    @include hover {
+      &::after {
+        width: 100%;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      translate: -50%;
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition-duration: inherit;
+    }
+    &:active {
+      color: var(--accent-color);
+    }
+  }
+}
